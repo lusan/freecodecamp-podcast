@@ -8,6 +8,20 @@ import {
     View,
 } from 'react-native';
 
+import Articles from './../components/articles'
+
+/**
+ * Home
+  CoverImage
+  ShareActions
+  Articles
+    Article
+      Title
+      PodcastPlayer
+      Description
+      
+ */
+
 class EntryScreen extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -35,6 +49,9 @@ class EntryScreen extends React.Component {
         return (
             <View style={styles.container}>
                 <Header />
+                <View style={styles.main}>
+                  <Articles />
+                </View>
                 <TopLevelScreenComponent
                     passDispatchedAction={this.passDispatchedAction}
                     failDispatchedAction={this.failDispatchedAction}
@@ -49,6 +66,9 @@ class EntryScreen extends React.Component {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#f8f8f8',
+    },
+    main: {
+      marginTop: 70
     }
 });
 
