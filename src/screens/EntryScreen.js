@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from "react-redux";
 import  SampleAction from './../actions/SampleAction';
 import TopLevelScreenComponent from './../components/TopLevelScreenComponent'
+import Header from './../components/header'
 import {
     StyleSheet,
     View,
@@ -33,6 +34,7 @@ class EntryScreen extends React.Component {
 
         return (
             <View style={styles.container}>
+                <Header />
                 <TopLevelScreenComponent
                     passDispatchedAction={this.passDispatchedAction}
                     failDispatchedAction={this.failDispatchedAction}
@@ -46,10 +48,7 @@ class EntryScreen extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
+        backgroundColor: '#f8f8f8',
     }
 });
 
