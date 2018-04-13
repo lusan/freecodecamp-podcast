@@ -37,6 +37,7 @@ class EntryScreen extends React.Component {
                     passDispatchedAction={this.passDispatchedAction}
                     failDispatchedAction={this.failDispatchedAction}
                     message={this.props.sampleReducer.message}
+                    history={this.props.history}
                 />
             </View>
         );
@@ -52,9 +53,10 @@ const styles = StyleSheet.create({
     }
 });
 
-function mapStateToProps(state) {
+function mapStateToProps(state, ownProps) {
     return ({
-            sampleReducer: state.sampleReducer
+            sampleReducer: state.sampleReducer,
+            location: ownProps.location
         }
 
     )

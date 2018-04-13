@@ -5,5 +5,5 @@ const RouterPackage = (Platform.OS === 'web') ? require('react-router-dom') : re
 /*
  * Remove Platform specific exports :/
  * */
-export const {Link, Route, Redirect} = RouterPackage;
+export const {Link, Route, Redirect, Switch} = RouterPackage;
 export const Router = (Platform.OS === 'web') ? RouterPackage.BrowserRouter : RouterPackage.NativeRouter;

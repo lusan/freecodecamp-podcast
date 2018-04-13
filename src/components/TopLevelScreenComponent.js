@@ -17,6 +17,12 @@ class TopLevelScreenComponent extends React.Component {
             passActionDispatchValue: 1,
             failActionDispatchValue: 0,
         };
+
+        this.navigateToHome = this.navigateToHome.bind(this)
+    }
+
+    navigateToHome() {
+      this.props.history.push('/home')
     }
 
     render() {
@@ -43,6 +49,13 @@ class TopLevelScreenComponent extends React.Component {
                         <Button
                             title={"Fail"}
                             onPress={this.props.failDispatchedAction}
+                        />
+                    </View>
+                    <View style={styles.button}>
+
+                        <Button
+                            title={"Home"}
+                            onPress={this.navigateToHome}
                         />
                     </View>
                 </View>
