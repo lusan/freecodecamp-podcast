@@ -6,6 +6,8 @@ import {
     Button
 } from 'react-native';
 
+import Articles from './../components/articles'
+
 // This is a dumb component that is common for native and web
 
 class TopLevelScreenComponent extends React.Component {
@@ -28,15 +30,15 @@ class TopLevelScreenComponent extends React.Component {
     render() {
 
         return (
-            <View>
-                <Text style={styles.biggerText}>
-                    {this.state.message}
-                </Text>
-
-                <View style={styles.row}>
+            <View style={styles.main}>
+                <View style={styles.pageMain}>
+                </View>
+                <Articles />
+                {/* <View style={styles.row}>
                     <Text style={styles.text}>
                         {this.state.dispatchMessage}
                     </Text>
+
                     <View style={styles.button}>
 
                         <Button
@@ -61,26 +63,32 @@ class TopLevelScreenComponent extends React.Component {
                 </View>
                 <Text style={styles.biggerText}>
                     {this.props.message}
-                </Text>
+                </Text> */}
             </View>
         );
     }
 }
 
 const styles = StyleSheet.create({
-    row: {
-        flexDirection: 'row',
-        margin: 5,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    biggerText: {
-        fontSize: 17,
-        alignSelf: 'center'
-    },
-    button: {
-        margin: 5
-    }
+  main: {
+    marginTop: 70
+  },
+  pageMain: {
+
+  },
+  row: {
+      flexDirection: 'row',
+      margin: 5,
+      justifyContent: 'center',
+      alignItems: 'center',
+  },
+  biggerText: {
+      fontSize: 17,
+      alignSelf: 'center'
+  },
+  button: {
+      margin: 5
+  }
 });
 
 export default TopLevelScreenComponent;

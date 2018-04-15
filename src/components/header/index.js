@@ -15,7 +15,6 @@ const styles = StyleSheet.create({
   header: {
     width: '100%',
     height: 60,
-    lineHeight: 60,
     position: 'absolute',
     zIndex: 999,
     backgroundColor: '#ffad26',

@@ -1,7 +1,8 @@
 import React from 'react'
 
 import {
-  View
+  View,
+  StyleSheet
 } from 'react-native'
 
 import Title from './Title'
