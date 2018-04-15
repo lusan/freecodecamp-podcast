@@ -3,7 +3,8 @@ import {
     StyleSheet,
     Text,
     View,
-    Button
+    Button,
+    ScrollView
 } from 'react-native';
 
 import Articles from './../components/articles'
@@ -31,9 +32,13 @@ class TopLevelScreenComponent extends React.Component {
 
         return (
             <View style={styles.main}>
-                <View style={styles.pageMain}>
-                </View>
-                <Articles />
+                <ScrollView>
+                  <View style={styles.pageMain}>
+                    <View style={{width: '95%'}}>
+                      <Articles />
+                    </View>
+                  </View>
+                </ScrollView>
                 {/* <View style={styles.row}>
                     <Text style={styles.text}>
                         {this.state.dispatchMessage}
@@ -71,10 +76,11 @@ class TopLevelScreenComponent extends React.Component {
 
 const styles = StyleSheet.create({
   main: {
-    marginTop: 70
+    marginTop: 70,
   },
   pageMain: {
-
+    flex: 1,
+    alignItems: 'center'
   },
   row: {
       flexDirection: 'row',
